@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Catalog from './../Catalog/Catalog.js'
 import Head from './../Head/Head.js'
 import Schedule from './../Schedule/Shedule.js'
+import Reservation from "../Reservation/Reservation.js";
 
 import './../App/App.css';
 import './../Head/Head.css';
@@ -16,6 +17,7 @@ function App() {
 		  	<Routes>
 			  	<Route path="/" element={<Catalog />} />
           <Route path="/filmes/:idFilmes" element={<Schedule />}></Route>
+          <Route path="/assentos/:idSessao" element={<Reservation />}></Route>
 			  </Routes>
 		  </BrowserRouter>
     </> 

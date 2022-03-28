@@ -1,0 +1,46 @@
+.Shedule-instruction{
+    margin-top: 76px;
+    width: 100%;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    color: #293845;
+}
+
+.Shedule-movies {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.Shedule-movies p{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #293845
+}
+
+.Shedule-movies .Shedule-buttons{
+    display: flex;
+    margin-bottom: 23px;
+    align-items: center;
+}
+
+.Shedule-movies .Shedule-buttons button{
+    width: 83px;
+    height: 43px;
+    align-items: center;
+    background-color: #e8833a;
+    border-radius: 3px;
+    margin-right: 8px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 21.09px;
+    border-color: #e8833a;
+}
