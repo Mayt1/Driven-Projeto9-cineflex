@@ -8,8 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 .Head-Header h1{
     color: #e8833a;
     font-size: 34px;
+    z-index: 100;
 }

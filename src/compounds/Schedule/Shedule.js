@@ -23,31 +23,31 @@ export default function Schedule() {
         promise.catch(err => console.log(err.response));
     }, []);
 
-    if(movieSchedule.length !== 0){
+    if (movieSchedule.length !== 0) {
         const session = [...movieSchedule.days]
         console.log(movieSchedule.days)
         return (
             <>
-                    <div className="Shedule-instruction">
-                        <h1>Selecione o horário</h1>
-                    </div>
-                    <div className="Shedule-movies">
-                        {
-                            session.map(movieSession => {
-                                const { id, weekday, date, showtimes } = movieSession;
-                                return <div className="Shedule-movie" key={id}>
-                                    <p>{weekday} - {date}</p>
-                                    <div className='Shedule-buttons'>
-                                        {showtimes.map(sessionHour => {
-                                            const { id, name } = sessionHour;
-                                            return <Link to={`/assentos/${id}`}> <button>{name}</button> </Link>
-                                        })}
-                                    </div>
+                <div className="Shedule-instruction">
+                    <h1>Selecione o horário</h1>
+                </div>
+                <div className="Shedule-movies">
+                    {
+                        session.map(movieSession => {
+                            const { id, weekday, date, showtimes } = movieSession;
+                            return <div className="Shedule-movie" key={id}>
+                                <p>{weekday} - {date}</p>
+                                <div className='Shedule-buttons'>
+                                    {showtimes.map(sessionHour => {
+                                        const { id, name } = sessionHour;
+                                        return <Link to={`/assentos/${id}`}> <button>{name}</button> </Link>
+                                    })}
                                 </div>
-                            })
-                        }
-                    </div>
-                </>
+                            </div>
+                        })
+                    }
+                </div>
+            </>
         );
     }
     return (
