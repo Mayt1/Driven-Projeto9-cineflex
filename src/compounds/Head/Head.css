@@ -1,0 +1,15 @@
+.Head-Header{
+    width: 100%;
+    height: 76px;
+    background-color: #c3cfd9;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Head-Header h1{
+    color: #e8833a;
+    font-size: 34px;
+}

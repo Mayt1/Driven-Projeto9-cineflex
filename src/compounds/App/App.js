@@ -1,25 +1,26 @@
-import logo from './../../assets/images/logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Catalog from './../Catalog/Catalog.js'
+import Head from './../Head/Head.js'
+import Schedule from './../Schedule/Shedule.js'
+
 import './../App/App.css';
+import './../Head/Head.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Head />
+      <BrowserRouter>
+		  	<Routes>
+			  	<Route path="/" element={<Catalog />} />
+          <Route path="/filmes/:idFilmes" element={<Schedule />}></Route>
+			  </Routes>
+		  </BrowserRouter>
+    </> 
   );
 }
 
 export default App;
+//<Route path="/contato" element={<Contato />} />
